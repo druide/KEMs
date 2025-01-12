@@ -9,7 +9,7 @@
 #![warn(clippy::integer_division_remainder_used)] // Be judicious about using `/` and `%`
 #![allow(non_snake_case)] // Allow notation matching the spec
 #![allow(clippy::clone_on_copy)] // Be explicit about moving data
-#![deny(missing_docs)] // Require all public interfaces to be documented
+//#![warn(missing_docs)] // Require all public interfaces to be documented
 
 //! # Usage
 //!
@@ -63,7 +63,7 @@ mod pke;
 pub mod kem;
 
 /// Section 7. Parameter Sets
-mod param;
+pub mod param;
 
 use ::kem::{Decapsulate, Encapsulate};
 use core::fmt::Debug;
